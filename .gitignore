@@ -1,1 +1,7 @@
+@"
 *.exe
+*.obj
+*.pdb
+Debug/
+Release/
+"@ | Out-File -FilePath .gitignore -Encoding utf8
