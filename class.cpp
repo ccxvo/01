@@ -30,6 +30,18 @@ void func(){
 int m_a;
 };
 
+class son1:public base{
+public:
+    son1(){
+        m_a=300;
+    }
+    void func(){
+        cout<<"son1 func"<<endl;
+    }
+
+    int m_a;
+};
+
 void test01(){
   son s;
   cout<<s.m_a<<endl;
