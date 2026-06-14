@@ -69,12 +69,7 @@
 \section*{实训题1}
 设有4个学生，每个学生有5门课的成绩，要求从键盘输入学生的学号、姓名及5门课的成绩，计算出平均成绩，并将每个学生的全部数据以字符串的形式保存到磁盘上的文本文件StudentGrade.txt中。
 
-\textbf{提示：}每个学生的数据占一行，一个学生的所有字段之间用；号分隔。
 
-
-每个学生的成绩\par
-第二个学生的成绩\\第三个学生的成绩，void1\quad void2 \qquad void3
-实验结果如图~\ref{result}
 
 \begin{lstlisting}[language=C]
 
@@ -156,6 +151,7 @@ int main(){
 \includegraphics[width=0.7\textwidth]{1.png}
 \caption{实验一运行结果}
 \label{result}
+
 \end{figure}
 
 
@@ -174,7 +170,85 @@ int main(){
 \textbf{提示：}所有学生的数据保存到字符串数组中，字符串数组的每个元素是一个字符串，包含了一个学生的所有数据，平均成绩应该是出现在第7个;号到本行结束之间的所有字符，读出平均成绩，按成绩对字符串数组排序。
 \begin{lstlisting}[language=C]
 #include<iostream>
+#include<string>
+#include<iomanip>
+#include<cstdlib>
+#include<fstream>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+static double extractAverage(const string &line) {
+    const char delimiter = '；';
+    int count = 0;
+    size_t pos = string::npos;
+    for(size_t i = 0; i < line.size(); i++) {
+        if(line[i] == delimiter) {
+            count++;
+            if(count == 7) {
+                pos = i;
+                break;
+            }
+        }
+    }
+    if(pos == string::npos || pos + 1 >= line.size()) {
+        return 0.0;
+    }
+    string avgStr = line.substr(pos + 1);
+    try {
+        return stod(avgStr);
+    } catch(...) {
+        return 0.0;
+    }
+}
+
+int main() {
+    system("chcp 65001 > nul");
+
+    vector<string> records;
+    ifstream ifs("StudentGrade.txt");
+    if(!ifs) {
+        cerr << "无法打开文件 StudentGrade.txt" << endl;
+        return 1;
+    }
+
+    string line;
+    while(getline(ifs, line)) {
+        if(!line.empty()) {
+            records.push_back(line);
+        }
+    }
+    ifs.close();
+
+    sort(records.begin(), records.end(), [](const string &a, const string &b) {
+        return extractAverage(a) > extractAverage(b);
+    });
+
+    ofstream ofs("SortedGrade.txt", ios::out);
+    if(!ofs) {
+        cerr << "无法创建文件 SortedGrade.txt" << endl;
+        return 1;
+    }
+
+    for(const auto &record : records) {
+        ofs << record << endl;
+    }
+    ofs.close();
+
+    cout << "排序完成，结果已保存到 SortedGrade.txt" << endl;
+    return 0;
+}
+
 \end{lstlisting}
+
+\begin{figure}[h]
+\centering%图片居中
+\includegraphics[width=0.7\textwidth]{2.png}
+\caption{实验二运行结果}
+\label{result}
+
+\end{figure}
 \vspace*{\fill}
 \newpage
 

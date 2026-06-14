@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.14)  14 JUN 2026 16:18
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.14)  14 JUN 2026 19:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -531,7 +531,11 @@ Package: xeCJK-listings 2022/08/05 v3.9.1 xeCJK patch file for listings
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 ) (d:/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-) (./小学期实验报告.aux)
+) (./小学期实验报告.aux
+
+LaTeX Warning: Label `result' multiply defined.
+
+)
 \openout1 = `小学期实验报告.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
@@ -736,6 +740,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4]
+Overfull \hbox (63.79008pt too wide) in paragraph at lines 224--225
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -744,6 +752,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5]
+File: 2.png Graphic file (type bmp)
+<2.png>
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -767,7 +778,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8] 
+[8]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[9]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./小学期实验报告.aux)
  ***********
@@ -782,14 +809,17 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 10119 strings out of 470139
- 249292 string characters out of 5477717
- 903754 words of memory out of 5000000
- 38556 multiletter control sequences out of 15000+600000
+ 10198 strings out of 470139
+ 250643 string characters out of 5477717
+ 910754 words of memory out of 5000000
+ 38634 multiletter control sequences out of 15000+600000
  636513 words of font info for 106 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 93i,12n,111p,362b,1871s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,12n,111p,362b,1873s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 小学期实验报告.pdf (8 pages).
+Output written on 小学期实验报告.pdf (10 pages).
