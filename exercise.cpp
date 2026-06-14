@@ -1,14 +1,26 @@
 #include<iostream>
 using namespace std;
 #include<fstream>
+#include<string>
+
 
 void test01(){
 
-ofstream ofs;
-ofs.open("text.txt",ios::out);
-ofs<<"Hello World";
-ofs.close();
+ifstream ifs;
+ifs.open("text.txt",ios::in);
+if(!ifs.is_open()){
+    cout<<"文件打开失败"<<endl;
+    return;
+}
 
+string buf;
+while ((getline(ifs,buf)))
+{
+    cout<<buf<<endl;
+}
+
+
+ifs.close();
 }
 
 
