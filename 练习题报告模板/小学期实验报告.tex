@@ -1,0 +1,250 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+% 关键：设置英文数字为 Times New Roman
+\usepackage{fontspec}
+%\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun} % 中文保持宋体
+\usepackage{graphicx}%图片
+\usepackage{xcolor}%颜色
+\usepackage{listings}%支持代码
+\lstset{
+	language=C,
+	basicstyle=\ttfamily\small,%字体样式
+	keywordstyle=\color{blue},%关键字颜色
+	commentstyle=\color{gray}, %注释颜色
+	numbers=left,%行号位置
+	numberstyle=\tiny\color{gray},%行号样式
+	frame=single,%边框样式
+	showspaces=false, %不显示空格标记
+	showstringspaces=false,%不显示字符串中的空格标记
+	inputencoding=utf8,%输入编码
+	extendedchars=true%支持拓展字符
+}
+
+
+% 页面设置
+\geometry{a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\onehalfspacing
+
+% 页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{江西财经大学}
+\rhead{程序设计实训}
+\cfoot{第 \thepage\ 页 / 共 \pageref{LastPage} 页}
+
+\begin{document}
+\thispagestyle{empty}
+% 封面（优化版：固定下划线长度 + 居中文字 + 增大字号）
+\begin{center}
+
+
+    {\Huge \textbf{江西财经大学}}\\[1cm]
+    {\Large \textbf{2025–2026 学年第 3 学期}}\\[1cm]
+    {\LARGE \textbf{《程序设计实训》实训习题}}\\[2cm]
+
+    \vspace{3cm}
+{\zihao{4}
+\makebox[2cm][s]{\songti 课程代码}\underline{\makebox[3.5cm][c]{ 1005405122}}\quad \makebox[2cm][s]{\songti 选课班}\underline{\makebox[3.5cm][c]{\songti 005班}}\\[0.5cm]
+\makebox[2cm][s]{\songti 课程名称}\underline{\makebox[3.5cm][c]{ \songti C++综合实践}}\quad \makebox[2cm][s]{\songti 任课教师}\underline{\makebox[3.5cm][c]{\songti 张勇}}\\[0.5cm]
+\makebox[2cm][s]{\songti 学号}\underline{\makebox[3.5cm][c]{ 0256658}}\quad \makebox[2cm][s]{\songti 姓名}\underline{\makebox[3.5cm][c]{\songti 桑赫}}\\[0.5cm]
+
+\makebox[2cm][s]{\songti 学院}\quad\underline{\makebox[9cm][c]{\songti  虚拟现实(VR)现代产业学院}}\\[0.5cm]
+\makebox[2cm][s]{\songti 专业}\quad\underline{\makebox[9cm][c]{\songti  软件工程(VR软件开发)}}\\[0.5cm]
+}
+
+    \vspace{2cm}
+    {\large 2026 年 6 月 14 日}
+\end{center}
+
+\newpage
+
+
+% 实训题1
+\section*{实训题1}
+设有4个学生，每个学生有5门课的成绩，要求从键盘输入学生的学号、姓名及5门课的成绩，计算出平均成绩，并将每个学生的全部数据以字符串的形式保存到磁盘上的文本文件StudentGrade.txt中。
+
+\textbf{提示：}每个学生的数据占一行，一个学生的所有字段之间用；号分隔。
+
+
+每个学生的成绩\par
+第二个学生的成绩\\第三个学生的成绩，void1\quad void2 \qquad void3
+实验结果如图~\ref{result}
+
+\begin{lstlisting}[language=C]
+
+#include<iostream>
+using namespace std;
+#include<string>
+#include<iomanip>
+#include<cstdlib>
+#include<fstream>
+#include<sstream>
+
+class Student{
+private:    
+string m_name;
+    int m_id;
+    int grades[5];
+    double m_average;
+
+    public:
+    
+       void input(){
+        cout<<"请输入学生姓名："<<endl;
+        cin>>m_name;
+        this->m_name;
+        cout<<"请输入学生学号："<<endl;
+        cin>>m_id;
+        this->m_id;
+      
+        int sum=0;
+        for(int i=0;i<5;i++){
+            cout<<"请输入第"<<i+1<<"门课程成绩："<<endl;
+            cin>>this->grades[i];
+            sum+=this->grades[i];
+        }
+        this->m_average=(double)sum/5;}
+
+      string toString() const {
+        ostringstream oss;
+        oss << m_name << "；" << m_id;
+        for(int i = 0; i < 5; i++) {
+            oss << "；" << grades[i];
+        }
+        oss << "；" << fixed << setprecision(2) << m_average;
+        return oss.str();
+      }
+
+      void write(){
+        ofstream ofs("StudentGrade.txt", ios::app);
+        if(!ofs) {
+            cerr << "无法打开文件 StudentGrade.txt" << endl;
+            return;
+        }
+        ofs << toString() << endl;
+
+        ofs.close();
+      }
+
+   
+};
+int main(){
+    system("chcp 65001 > nul");
+
+    for(int i = 0; i < 4; i++){
+      cout << "输入第" << i+1 << "位学生信息" << endl;
+      Student s;
+      s.input();
+      s.write();
+    }
+
+  return 0;
+}
+
+
+\end{lstlisting}
+
+
+\begin{figure}[h]
+\centering%图片居中
+\includegraphics[width=0.7\textwidth]{1.png}
+\caption{实验一运行结果}
+\label{result}
+\end{figure}
+
+
+
+
+
+
+
+\vspace*{\fill}
+\newpage
+
+% 实训题2
+\section*{实训题2}
+读取上题中的文本文件StudentGrade.txt中的数据，按平均成绩进行降序排序，并将排序后的所有数据保存到新的文本文件SortedGrade.txt中。
+
+\textbf{提示：}所有学生的数据保存到字符串数组中，字符串数组的每个元素是一个字符串，包含了一个学生的所有数据，平均成绩应该是出现在第7个;号到本行结束之间的所有字符，读出平均成绩，按成绩对字符串数组排序。
+\begin{lstlisting}[language=C]
+#include<iostream>
+\end{lstlisting}
+\vspace*{\fill}
+\newpage
+
+% 实训题3
+\section*{实训题3}
+构造结构体StudentGrade，要求从键盘输入学生的学号、姓名及5门课的成绩，计算出平均成绩，写入数据到结构体数组中。并将每个学生的全部数据保存到磁盘上的二进制文件StudentGrade.dat中。
+
+\textbf{提示：}二进制文件创建语句pf=fopen("student.dat","wb");\par
+写二进制文件语句fwrite(\&stu[i],sizeof(Student),1,fp);
+\begin{lstlisting}[language=C]
+#include<iostream>
+\end{lstlisting}
+\vspace*{\fill}
+
+
+
+
+
+
+
+
+\newpage
+
+% 实训题4
+\section*{实训题4}
+设计一个函数SortByAvg()，读取上题中的二进制文件StudentGrade.dat中的数据到结构体数组中，按平均成绩进行降序排序，并将排序后的所有数据保存到新的二进制文件SortedGrade.dat中。
+\begin{lstlisting}[language=C]
+#include<iostream>
+\end{lstlisting}
+\vspace*{\fill}
+\newpage
+
+% 实训题5
+\section*{实训题5}
+编写一个随机加分的程序，要求如下：
+
+(1) 事先编辑好一个存放所有学生学号的文本文件，每个学生的学号占一行, 假设总行数为m；
+
+(2) 产生一个随机数$n(1<=n<=m)$，据此读取文本文件中的第n行的学生学号并输出，然后删除这个文本文件的第n行, 设置总行数为m -1；
+
+(3) 在学生结构体数组中查询刚才随机挑选的学号的学生记录是否存在，如果存在则将该生的数学成绩加10分，并更新磁盘上的数据文件，如果不存在则提示查无此人。
+
+(4) 将该功能实现为循环模式，可用户决定是否继续随机加分。
+
+\textbf{解答：}
+\begin{lstlisting}[language=C]
+#include<iostream>
+\end{lstlisting}
+
+
+
+
+
+
+
+
+\vspace*{\fill}
+\newpage
+
+% 实训题6
+\section*{实训题6}
+修改学生结构体，增加籍贯和专业字段，并实现以下统计功能：
+
+(1) 计算和报告各门课程按籍贯或按专业分组后成绩的最大值、最小值、均值、中位数。
+
+(2) 按成绩统计，计算和报告各门课程各成绩段人数占选课人数的百分比。成绩分为5段：0、(0,60)、[60,75)、[75,90)、[90,100]。
+\begin{lstlisting}[language=C]
+#include<iostream>
+\end{lstlisting}
+\vspace*{\fill}
+\newpage
+
+\end{document}
