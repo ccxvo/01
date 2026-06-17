@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.14)  14 JUN 2026 19:23
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.14)  14 JUN 2026 20:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -538,6 +538,21 @@ LaTeX Warning: Label `result' multiply defined.
 
 LaTeX Warning: Label `result' multiply defined.
 
+
+LaTeX Warning: Label `result' multiply defined.
+
+
+LaTeX Warning: Label `result' multiply defined.
+
+
+LaTeX Warning: Label `result' multiply defined.
+
+
+LaTeX Warning: Label `result' multiply defined.
+
+
+LaTeX Warning: Label `result' multiply defined.
+
 )
 \openout1 = `小学期实验报告.aux'.
 
@@ -799,6 +814,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [9]
+Overfull \hbox (4.6596pt too wide) in paragraph at lines 371--372
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+File: 4.png Graphic file (type bmp)
+<4.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -814,7 +838,145 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11] 
+[11]
+Overfull \hbox (4.6596pt too wide) in paragraph at lines 458--459
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13]
+Overfull \hbox (11.22966pt too wide) in paragraph at lines 549--550
+[][][][][][][][][][][][][][][][][] 
+ []
+
+File: 5.png Graphic file (type bmp)
+<5.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16]
+Overfull \hbox (11.22966pt too wide) in paragraph at lines 658--659
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.6596pt too wide) in paragraph at lines 676--677
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17]
+Overfull \hbox (11.22966pt too wide) in paragraph at lines 699--700
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19]
+File: 61.png Graphic file (type bmp)
+<61.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: 62.png Graphic file (type bmp)
+<62.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: 63.png Graphic file (type bmp)
+<63.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[20]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[21]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[22]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./小学期实验报告.aux)
  ***********
@@ -834,12 +996,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 10255 strings out of 470139
- 251770 string characters out of 5477717
- 910754 words of memory out of 5000000
- 38690 multiletter control sequences out of 15000+600000
+ 10503 strings out of 470139
+ 256085 string characters out of 5477717
+ 939754 words of memory out of 5000000
+ 38933 multiletter control sequences out of 15000+600000
  636513 words of font info for 106 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  93i,12n,111p,362b,1873s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 小学期实验报告.pdf (11 pages).
+Output written on 小学期实验报告.pdf (23 pages).
