@@ -3,7 +3,8 @@
 # 用法: cd website && bash build.sh
 
 echo "正在构建 C++ 博客网站..."
-g++ -std=c++20 -Wall -O2 -o blog.exe *.cpp -lws2_32
+# -static: 静态链接 MinGW 运行时库，生成的 exe 不依赖额外 DLL
+g++ -std=c++20 -Wall -O2 -static -o blog.exe *.cpp -lws2_32
 
 if [ $? -eq 0 ]; then
     echo ""
@@ -12,6 +13,8 @@ if [ $? -eq 0 ]; then
     echo ""
     echo "  运行: ./blog.exe"
     echo "  访问: http://localhost:8080"
+    echo ""
+    echo "  提示: 使用 -static 编译，无需额外 DLL"
     echo "=========================================="
 else
     echo ""
