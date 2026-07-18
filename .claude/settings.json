@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xxd data/users.bin)",
+      "Bash(xxd data/posts.bin)",
+      "Bash(xxd data/comments.bin)",
+      "Bash(rm -rf data blog_simple.exe)",
+      "Bash(g++ -std=c++11 -Wall -O2 -static -o blog_simple.exe main.cpp)",
+      "Bash(timeout 8s ./blog_simple.exe)",
+      "Bash(timeout 10s ./blog_simple.exe)",
+      "Bash(_mkdir data *)"
+    ]
+  }
+}

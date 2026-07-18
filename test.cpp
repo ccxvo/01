@@ -1,79 +1,27 @@
-#include <iostream>
-#include <string>
+#include<iostream>
 using namespace std;
 
+class date{
 
 
-class Teacher {
-public:
-    Teacher(int n, const string &na, char s, int a, const string &t, const string &ad)
-        : num(n), name(na), sex(s), age(a), title(t), addr(ad) {}
-
-    void display() const {
-        cout << "Num: " << num << endl;
-        cout << "Name: " << name << endl;
-        cout << "Sex: " << sex << endl;
-        cout << "Age: " << age << endl;
-        cout << "Title: " << title << endl;
-        cout << "Addr: " << addr << endl;
-    }
-
-protected:
-    int num;
-    string name;
-    char sex;
-    int age;
-    string title;
-    string addr;
 };
-
-class Cadre {
+class person{
+    person(int n,int m,int y);
+    int year;
+    int day;
+    int month;
 public:
-    Cadre(int n, const string &na, char s, int a, const string &p, const string &ad)
-        : num(n), name(na), sex(s), age(a), post(p), addr(ad) {}
+year=y;
 
-protected:
-    int num;
-    string name;
-    char sex;
-    int age;
-    string post;
-    string addr;
-};
+const int count
+void show()const{
 
-class Teacher_Cadre : public Teacher, public Cadre {
-public:
-    Teacher_Cadre(int n, const string &na, char s, int a, const string &t, const string &p, const string &ad, float w)
-        : Teacher(n, na, s, a, t, ad), Cadre(n, na, s, a, p, ad), wages(w) {}
+int person::count=0;
+}
 
-  
-    void set_wages(float w) {
-        wages = w;
-    }
+}
+int main(){
 
-    void show() const {
-        Teacher::display(); 
-        cout << "Post: " << Cadre::post << endl;
-        cout << "Wages: " << wages << endl;
-    }
-
-private:
-    float wages;
-};
-
-
-
-int main() {
-    Teacher_Cadre prof1(101, "Zhang San", 'm', 40, "Associate Prof", "Director", "Beijing Road 101", 5000.0);
-
-    cout << ">>> Original Data:" << endl;
-    prof1.show();
-
-    cout << "\n>>> Modifying wages..." << endl;
-    prof1.set_wages(8800.0);
-
-    cout << "\n>>> Updated Data:" << endl;
-    prof1.show();
 
     return 0;
 }
